@@ -39,7 +39,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/weiraven/the-nekonomicon/blob/main/public/images/neko-demo.gif' title='Video Walkthrough' width='1000' alt='Video Walkthrough' />
+<img src='https://github.com/weiraven/the-nekonomicon/blob/main/public/images/neko-demo.gif' title='Video Walkthrough' width='900' alt='Video Walkthrough' />
 
 GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
 
