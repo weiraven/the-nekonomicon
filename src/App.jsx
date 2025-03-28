@@ -7,6 +7,8 @@ import BanList from './components/BanList';
 const API_KEY = import.meta.env.VITE_CAT_API_KEY;
 
 function App() {
+  const [loading, setLoading] = useState(false);
+  const [loadingMessage, setLoadingMessage] = useState("Calling to the void...");
   const [history, setHistory] = useState([]);
   const [cat, setCat] = useState(null);
   const [banList, setBanList] = useState({
@@ -17,6 +19,7 @@ function App() {
   
 
   const fetchCat = async () => {
+    setLoading(true);
     let newCat = null;
     let attempts = 0;
   
@@ -74,12 +77,20 @@ function App() {
         temperament: breed.temperament
       };
     }
+
+    setLoading(false);
   
     if (newCat) {
       setCat(newCat);
       setHistory(prev => [...prev, newCat]);
+      setLoading(false);
+      setLoadingMessage("Calling to the void...");
     } else {
-      alert("🕯️ The void echoes with silence. No cats remain unbanished.");
+      setLoadingMessage("🕯️ The void echoes with silence. No cats remain unbanished.");
+      setTimeout(() => {
+        setLoading(false);
+        setLoadingMessage("Calling to the void...");
+      }, 3000); // display the failure message for 3 seconds
     }
   };
 
@@ -115,6 +126,11 @@ function App() {
       />
       <span className="summon-text">Summon</span>
     </div>
+      {loading && (
+        <div className="summon-overlay">
+          <span className="summon-overlay-text">{loadingMessage}</span>
+        </div>
+      )}
     <div className="main-columns">
       <div className="history-container">
         <h3>Recall</h3>
