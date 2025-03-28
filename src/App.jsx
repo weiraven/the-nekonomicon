@@ -23,7 +23,7 @@ function App() {
     let newCat = null;
     let attempts = 0;
   
-    while (!newCat && attempts < 30) {
+    while (!newCat && attempts < 10) {
       const response = await axios.get("https://api.thecatapi.com/v1/images/search?include_breeds=1", {
         headers: {
           "x-api-key": API_KEY
@@ -90,7 +90,7 @@ function App() {
       setTimeout(() => {
         setLoading(false);
         setLoadingMessage("Calling to the void...");
-      }, 3000); // display the failure message for 3 seconds
+      }, 4000); // display the failure message for 3 seconds
     }
   };
 
