@@ -2,6 +2,10 @@
 
 **Use the Nekonomicon to summon feline familiars from the Beyond...**
 
+## Live Demo
+
+[View the live site on Netlify](https://nekonomicon.netlify.app/)
+
 ## Required Features
 
 The following **required** functionality is completed: 
