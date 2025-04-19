@@ -2,13 +2,7 @@
 
 **Use the Nekonomicon to summon feline familiars from the Beyond...**
 
-## Live Demo
-
-[View the live site on Netlify](https://nekonomicon.netlify.app/)
-
-## Required Features
-
-The following **required** functionality is completed: 
+## Features
 
 - [x] **Application features a button that creates a new API fetch request on click and displays at least three attributes and an image obtained from the returned JSON data**
   - The type of attribute displayed for each image should be consistent across API calls (i.e. if you are using a cat API, and display the color, breed, and age in response to an initial API call, subsequent button clicks should also result in the color, breed, and age being displayed)
@@ -25,9 +19,6 @@ The following **required** functionality is completed:
   - Clicking on an attribute in the ban list should immediately remove it from the ban list 
 - [x] **Attributes on the ban list prevent further images/API results with that attribute from being displayed**
   - Clicking on the API call button should not result in any image/attributes with attribute values in the ban list being displayed (ex. Using a cat API, if the ban list includes the value 'Siberian' for the breed attribute, clicking on the Discover button should never result in a Siberian cat being displayed)
-
-The following **optional** features are implemented:
-
 - [x] Multiple types of attributes are clickable and can be added to the ban list
 - [x] Users can see a stored history of their previously displayed  results from this session
   - A dedicated section of the application displays all the previous images/attributes seen before
